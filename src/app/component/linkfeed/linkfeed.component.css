@@ -1,0 +1,33 @@
+
+.thoughtContainer {
+background: #fdd;
+border-radius: 20px;
+line-height: 3em;
+
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+        "thought thought thought author"
+        "shares comment comment comment"
+}
+
+.thought {
+    grid-area: thought;
+}
+
+.originator {
+    grid-area: author;
+    background: #dbb;
+    border: 1px solid white;
+}
+
+.commentContainer {
+    grid-area: comment;
+}
+
+.shares {
+    grid-area: shares;
+    background: #dbb;
+}

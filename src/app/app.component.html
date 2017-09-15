@@ -1,25 +1,25 @@
-
-
-
-
-
-
-
-
-
-<div fxLayout="row" style="height: 100vh">
-  <div class="sidebar" fxFlex="25" fxLayout="column" style="background-color: #FFA">
-    <div class="titleContainer" fxFlex="10" fxLayoutAlign="center center" style="background-color: #CC7">
+<div class="gridWrapper">
+  <div class="titleWrapper" style="background-color: #755">
       <div class="title">
         <span>BOMO</span>
       </div>
-    </div>
-    <div class="linkContainer" fxFlex fxLayout="column" fxLayoutAlign="center center">
-      <button md-button routerLink="dash">Dashboard</button>
-      <button md-button routerLink="linkfeed">Linkfeed</button>
+  </div>
+  <div class="navWrapper" style="background-color: #a88">
+    <div class="navLinks">
+      <div class="navlink link1"><a routerLink="dash">Dashboard</a></div>
+      <div class="navlink link2"><a routerLink="linkfeed">Linkfeed</a></div>
+      <div class="navlink link3"><a routerLink="dash">MoneyMachine</a></div>
+      <div class="navlink link4"><a routerLink="dash">Dashboard4</a></div>
+      <div class="navlink link5"><a routerLink="dash">Dashboard5</a></div>
+      <div class="navlink link6"><a routerLink="dash">Dashboard6</a></div>
     </div>
   </div>
-  <div class="mainContent" fxFlex>
+  <div class="extraWrapper">
+    <div>
+      Extra Content
+    </div>
+  </div>
+  <div class="mainWrapper">
     <router-outlet></router-outlet>
   </div>
 </div>

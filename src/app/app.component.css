@@ -1,5 +1,6 @@
-.spacer {
-   flex: 1 1 auto;
+.title {
+    grid-area: text;
+    align-self: center;
 }
 /*
 .main {
@@ -13,3 +14,95 @@
     background-color: #361;
 }
 */
+
+.gridWrapper {
+    height: 94vh;
+    display: grid;
+    grid-gap: 20px;
+    margin: 20px;
+    grid-template-columns: 2fr 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav title main"
+    "nav title main"
+    "extra extra main"
+    "extra extra main"
+    "extra extra main";
+}
+
+.titleWrapper {
+    grid-area: title;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    ". . ."
+    ". text ."
+    ". . .";
+}
+
+.extraWrapper {
+    grid-area: extra;
+    background: #644;
+}
+
+.navWrapper {
+    grid-area: nav;
+    width: minmax(100px, 400px);
+}
+
+.mainWrapper {
+    grid-area: main;
+    background: #866;
+}
+
+.navLinks {
+    font-size: 12px;
+    display: grid;
+    grid-gap: 10px;
+    line-height: 2.5em;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-auto-rows: minmax(48px, 1fr);
+    grid-template-areas:
+        ". . . ."
+        ". l1 l2 ."
+        ". l3 l4 ."
+        ". l5 l6 ."
+        ". . . .";
+}
+
+.navlink {
+    background: #a88;
+    text-align: center;
+    align-content: space-around;
+}
+
+.navlink>a {
+}
+
+.link1 {
+    grid-area: l1;
+}
+
+.link2 {
+    grid-area: l2;
+    background: #caa;
+}
+
+.link3 {
+    grid-area: l3;
+}
+
+.link4 {
+    grid-area: l4;
+    background: #caa;
+}
+
+.link5 {
+    grid-area: l5;
+}
+
+.link6 {
+    grid-area: l6;
+    background: #caa;
+}

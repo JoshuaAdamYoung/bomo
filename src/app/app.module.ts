@@ -12,11 +12,13 @@ import { AppComponent } from './app.component';
 import { LinkfeedComponent } from './component/linkfeed/linkfeed.component';
 import { DashComponent } from './component/dash/dash.component';
 
+import { DataService } from './svc/data.service';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'dash', pathMatch: 'full'},
   {path: 'dash', component: DashComponent},
-  {path: 'linkfeed', component: LinkfeedComponent}
+  {path: 'linkfeed', component: LinkfeedComponent},
+  {path: '**', redirectTo: 'dash'}
 ];
 
 
@@ -40,7 +42,9 @@ const appRoutes: Routes = [
     AngularFireModule
 
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

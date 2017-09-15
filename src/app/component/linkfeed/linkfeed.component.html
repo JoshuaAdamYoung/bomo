@@ -1,12 +1,26 @@
-<md-tab-group>
-  <md-tab label="AltFCC">
-    <h1>
-      AltFCC Links
-    </h1>
-  </md-tab>
-  <md-tab label="OyateRising">
-    <h1>
-      Oyate Rising Links
-    </h1>
-  </md-tab>
-</md-tab-group>
+<div class="thoughtContainer" *ngFor="let item of this.data">
+  
+  <div class="thought">
+    {{item.text}}
+  </div>
+  
+  <div class="originator">
+    {{ item.createdBy }}
+  </div>
+  
+  <div class="commentContainer" *ngIf="item.comments.length">
+    <div class="comment" *ngFor="let comment of item.comments">
+
+      <div class="comText">
+        {{ comment.text }}
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div class="shares">
+    {{ item.shares.length }}
+  </div>
+
+</div>
